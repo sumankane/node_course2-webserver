@@ -43,6 +43,13 @@ app.get ('/about',(req,res) => {
   });
 });
 
+app.get ('/projects',(req,res) => {
+  res.render('projects.hbs',{
+    pageTitle: 'Projects Page',
+    message: 'Get your portfolio list here'
+  });
+});
+
 app.get ('/bad',(req, res) => {
   res.send ({
     error: 'Unexpected error occured',
